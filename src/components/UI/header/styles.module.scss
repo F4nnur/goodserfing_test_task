@@ -1,0 +1,58 @@
+
+.headerContainer {
+  position: static;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: #FFF;
+  box-shadow: 0px 1px 0px 0px #DFE6EB;
+}
+
+.headerLogo {
+  display: flex;
+  gap: 26px;
+  justify-content: space-between;
+  padding: 17px 50px;
+}
+
+.headerRightSide {
+  display: flex;
+  gap: 36px;
+}
+
+.heartAndMail {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.headerLanguageChange {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headerLanguageButton {
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.username {
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
