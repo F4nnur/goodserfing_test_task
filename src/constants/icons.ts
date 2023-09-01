@@ -11,6 +11,7 @@ import organization from '../assets/icons/organization.svg';
 import requests from '../assets/icons/requests.svg';
 import vacancy from '../assets/icons/vacancy.svg';
 import arrowRight from '../assets/icons/arrowRight.svg';
+import support from '../assets/icons/support.svg';
 
 export const ICONS = {
   logo,
@@ -26,4 +27,5 @@ export const ICONS = {
   organization,
   calendar,
   arrowRight,
+  support,
 };
