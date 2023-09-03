@@ -4,14 +4,25 @@ import { item } from '../../../interfaces/menuInterfaces';
 import { ICONS } from '../../../constants/icons';
 
 interface MenuProps {
-  items: item[],
+  items: item[];
 }
 
 const Menu: React.FC<MenuProps> = ({ items }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openSubmenuIndex, setOpenSubmenuIndex] = useState(-1); // Индекс открытого подменю
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleSubmenu = (index: number) => {
+    if (openSubmenuIndex === index) {
+      // Если уже открыто, закрываем подменю
+      setOpenSubmenuIndex(-1);
+    } else {
+      // В противном случае открываем подменю
+      setOpenSubmenuIndex(index);
+    }
   };
 
   return (
@@ -21,10 +32,19 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
           <img src={isMenuOpen ? ICONS.menuButton : ICONS.arrowRight} alt={'menuButton'} />
         </div>
         <ul>
-          {items.map((item) => (
+          {items.map((item, index) => (
             <li key={item.value}>
               <img src={item.icon} alt={'desktopIcon'} />
-              <div>{item.value}</div>
+              <div onClick={() => toggleSubmenu(index)}>{item.value}</div>
+              {openSubmenuIndex === index && (
+                <ul>
+                  <li>Описание</li>
+                  <li>Фотогалерея</li>
+                  <li>Видеогалерея</li>
+                  <li>Команда</li>
+                  <li>Отзывы</li>
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -38,12 +58,8 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
               <div>Ваш персональный помощник по работе с системой</div>
             </div>
             <div className={s.support__contentFooter}>
-              <div className={s.support__contentFooterButton}>
-                Написать
-              </div>
-              <div>
-                E-mail support@goodsurefing.org
-              </div>
+              <div className={s.support__contentFooterButton}>Написать</div>
+              <div>E-mail support@goodsurefing.org</div>
             </div>
           </div>
         </div>

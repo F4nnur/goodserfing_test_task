@@ -19,9 +19,19 @@
   background-color: #FFFFFF;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.03);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
   padding: 30px 27px 20px 1px;
+}
+.menu__content > .support {
+  display: flex;
+  justify-content: center;
+}
+.menu__contentDList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 ul {
@@ -29,10 +39,19 @@ ul {
 }
 
 ul li {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 14px;
   align-items: center;
+}
+
+li ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 1px solid #8494A1;
+  margin-left: 10px;
 }
 
 ul li div {
@@ -56,10 +75,10 @@ ul li div {
 }
 
 .support {
-  position: fixed;
+  //position: fixed;
   top: 49.9%;
-  width: 246px;
-  height: 264px;
+  //width: 246px;
+  //height: 264px;
   left: 1%;
   border-radius: 10px;
   border: 1px solid var(--text-caption, #8494A1);

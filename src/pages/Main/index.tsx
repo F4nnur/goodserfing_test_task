@@ -5,11 +5,12 @@ import Menu from '../../components/UI/Menu/Menu';
 import { ICONS } from '../../constants/icons';
 
 const MainPage: React.FC = () => {
-  const items = [{ icon: ICONS.desktopIcon, value: 'Рабочий стол' },
-    { icon: ICONS.vacancy, value: 'Вакансии' },
-    { icon: ICONS.requests, value: 'Заявки' },
-    { icon: ICONS.calendar, value: 'Календарь' },
-    { icon: ICONS.organization, value: 'Организации' },
+  const items = [
+    { icon: ICONS.desktopIcon, value: 'Рабочий стол', href: '#' },
+    { icon: ICONS.vacancy, value: 'Вакансии', href: '#' },
+    { icon: ICONS.requests, value: 'Заявки', href: '#' },
+    { icon: ICONS.calendar, value: 'Календарь', href: '#' },
+    { icon: ICONS.organization, value: 'Организации', href: '#' },
   ];
 
   return (
